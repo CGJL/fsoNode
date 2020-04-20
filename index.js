@@ -46,6 +46,10 @@ function generateID() {
 
   return maxId + 1;
 }
+
+app.get("/", (req, res) => {
+  res.json({ message: "Hello!" });
+});
 app.get("/api/persons", (req, res) => {
   res.json(persons);
 });
