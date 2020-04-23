@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 
 const morgan = require("morgan");
@@ -17,8 +18,6 @@ const errorHandler = (error, request, response, next) => {
 
   next(error);
 };
-
-require("dotenv").config();
 
 const Person = require("./models/person");
 
